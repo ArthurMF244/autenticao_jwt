@@ -1,0 +1,225 @@
+/* ======== FUNDO PROFISSIONAL COM GRADIENTE ======== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(135deg, #dbe7ff 0%, #eef3ff 50%, #d3e2ff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======== CARD COM GLASSMORPHISM ======== */
+.card {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.45s ease-out;
+}
+
+/* ======== ANIMAÇÃO DE ENTRADA ======== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== TÍTULOS ======== */
+h2 {
+    text-align: center;
+    color: #1f1f1f;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.div-cliente-id,
+.div-cliente-secret {
+    display:flex;
+    margin-bottom: 20px;
+}
+
+/* ======== INPUT LABEL ======== */
+label {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+/* ======== INPUTS PROFISSIONAIS ======== */
+input[type="text"],
+input[type="password"] {
+    height: 50px;
+    padding: 0 14px;
+    font-size: 15px;
+    border-radius: 0px 12px 12px 0px;
+    border: 1px solid #cfd8e3;
+    background: #f8f9fc;
+    transition: .25s;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4b7bec;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(80, 120, 255, 0.20);
+}
+
+/* ======== BOTÃO ======== */
+button,
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: #4b7bec;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover,
+.btn:hover {
+    background: #3867d6;
+    transform: scale(1.03);
+}
+
+/* ======== CAIXA DO PAYLOAD ======== */
+pre {
+    background: #f4f6ff;
+    padding: 12px;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid #d9e3ff;
+    color: #222;
+    font-size: 14px;
+}
+
+/* ======== ÍCONES DOS INPUTS ======== */
+.input-icon {
+    width: 50px;
+    height: 50px;
+    background: #f0f2f7;
+    border-radius: 12px 0px 0px 12px;
+    border: 1px solid #cfd8e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #5a5a5a;
+}
+
+/* ========================================================= */
+/* ====================== DASHBOARD ========================= */
+/* ========================================================= */
+
+/* Ícone do usuário */
+.user-icon {
+    font-size: 60px;
+    text-align: center;
+    color: #4b7bec;
+    margin-bottom: 15px;
+}
+
+/* Caixa do token */
+.token-box {
+    background: #f4f6ff;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #d9e3ff;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Botão copiar */
+.copy-btn {
+    background: #4b7bec;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.copy-btn:hover {
+    background: #3867d6;
+    transform: scale(1.05);
+}
+
+/* Caixa do payload */
+.payload-box {
+    background: #fafbff;
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid #d9e3ff;
+}
+
+/* ======= WRAPPER DO TOKEN + BOTÃO ======= */
+.card-dashboard {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.45s ease-out;
+}
+
+.token-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+/* Textarea CERTA */
+#jwtToken {
+    flex: 1;
+    height: 100px;
+    resize: none;
+    white-space: nowrap;      /* NÃO quebra linha */
+    overflow-x: auto;         /* scroll horizontal */
+    overflow-y: hidden;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 13px;
+
+    background: #f4f6ff;
+    border-radius: 12px;
+    border: 1px solid #d9e3ff;
+}
+
+/* Botão copiar FINO (não gigante kkkkk) */
+.copy-btn {
+    width: 40px;
+    height: 40px;
+    background: #4b7bec;
+    border: none;
+    border-radius: 12px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.copy-btn i {
+    font-size: 20px;
+}
+
+.copy-btn:hover {
+    background: #3867d6;
+    transform: scale(1.07);
+}
