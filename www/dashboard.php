@@ -41,14 +41,6 @@ $token = gerar_jwt($payload, $JWT_SECRET);
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-    <script>
-        function copiarToken() {
-            const token = document.getElementById("jwtToken").innerText;
-            navigator.clipboard.writeText(token);
-            alert("Token copiado!");
-        }
-    </script>
-
 </head>
 
 <body>
@@ -76,7 +68,41 @@ $token = gerar_jwt($payload, $JWT_SECRET);
         <pre><?= json_encode($payload, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) ?></pre>
     </div>
 
+    <button class="btn-register" onclick="abrirModalCadastro()">
+        <i class="bi bi-person-plus-fill"></i> Cadastrar Novo Usuário
+    </button>
+
 </div>
+
+<!-- Fundo blur -->
+<div id="overlay" class="overlay hidden" onclick="fecharModalCadastro()"></div>
+
+<!-- Modal -->
+<div id="modalCadastro" class="modal-cadastro hidden">
+
+    <h3><i class="bi bi-person-fill-add"></i> Novo Usuário</h3>
+
+    <label class="label-cadastro">Nome Completo</label>
+    <input type="text" id="cad_nome">
+
+    <label class="label-cadastro">Email</label>
+    <input type="email" id="cad_email">
+
+    <label class="label-cadastro">Usuário (login)</label>
+    <input type="text" id="cad_user">
+
+    <label class="label-cadastro">Senha</label>
+    <input type="password" id="cad_senha">
+
+    <div class="modal-actions">
+        <button onclick="fecharModalCadastro()" class="btn-cancel">Cancelar</button>
+        <button onclick="salvarNovoUsuario()" class="btn-confirm">Salvar</button>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>

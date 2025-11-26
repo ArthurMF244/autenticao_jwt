@@ -223,3 +223,120 @@ pre {
     background: #3867d6;
     transform: scale(1.07);
 }
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);    /* aplica blur */
+    z-index: 9000;
+}
+
+.modal-cadastro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    max-width: 90%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    padding: 28px 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 35px rgba(0,0,0,0.25);
+    z-index: 9999;
+    animation: fadeModal .25s ease-out;
+}
+
+@keyframes fadeModal {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.modal-cadastro input {
+    all: unset;             /* remove TODO o css herdado */
+    box-sizing: border-box; /* impede estourar largura */
+
+    display: block;
+    width: 100%;
+
+    margin-bottom: 16px;
+    padding: 12px 14px;
+
+    background: #f8f9fc;
+    border: 1px solid #d0d7e3;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #000;
+}
+
+.modal-cadastro input:focus {
+    border-color: #4b7bec;
+    box-shadow: 0 0 0 3px rgba(75, 123, 236, 0.25);
+    outline: none;
+}
+
+.label-cadastro {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Botões */
+.modal-actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.btn-cancel,
+.btn-confirm {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background: #4b4646;
+}
+
+.btn-confirm {
+    background: #4b7bec;
+    color: #fff;
+}
+
+.btn-confirm:hover {
+    background: #3a63d8;
+}
+
+.btn-register {
+    width: 40%;
+    margin: 20px auto 0 auto;
+    display: block;
+    padding: 14px;
+    background: #4b7bec;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+    text-align: center;
+}
+
+.btn-register:hover {
+    background: #3867d6;
+    transform: scale(1.03);
+}
