@@ -20,13 +20,13 @@
             <label>Client ID</label>
             <div class="div-cliente-id">
                 <span class="input-icon"><i class="bi bi-key"></i></span>
-                <input type="text" name="clientID" value="meuapp123" required>
+                <input type="text" name="clientID" value="batman" required>
             </div>
 
             <label>Client Secret</label>
             <div class="div-cliente-secret">
                 <span class="input-icon"><i class="bi bi-lock-fill"></i></span>
-                <input type="password" name="clientSecret" value="segredo123" required>
+                <input type="password" name="clientSecret" value="arthur123" required>
             </div>
 
             <button type="submit" class="btn">
